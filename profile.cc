@@ -3,8 +3,8 @@
 
 const double Profile::GetTime() {
   //part one
-  float goal = this->goal_.postion;//this is current position
-  float current = this->current_.postion;
+  float goal = this->goal_.position;//this is current position
+  float current = this->current_.position;
   float delta_x = goal - current;
   double t = sqrt(2*delta_x/kMaxAcceleration);
   
@@ -13,7 +13,7 @@ const double Profile::GetTime() {
   double t1 = (kMaxVelocity-velocity)/kMaxAcceleration;// equasion is (vf-vi)/a
   double s1 = t1*(kMaxVelocity/2);
   double remainting_distance = goal-s1;
-  double t2 = s1/KMaxVelocity; //seccond period of time
+  double t2 = s1/kMaxVelocity; //seccond period of time
   double final_time = t1 + t2; //final time
 
   //calculations
